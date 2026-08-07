@@ -1,0 +1,11 @@
+[picard] iter 0: res=1.0443e+00  nu*/g(t=0)=0.158
+[picard] iter 1: res=1.0867e+00  nu*/g(t=0)=0.158
+[picard] iter 2: res=1.0625e+00  nu*/g(t=0)=0.158
+[picard] iter 3: res=9.8442e-01  nu*/g(t=0)=0.158
+[picard] iter 4: res=7.7741e-01  nu*/g(t=0)=0.158
+[picard] iter 5: res=4.1702e-01  nu*/g(t=0)=0.158
+[picard] iter 6: res=1.8789e-01  nu*/g(t=0)=0.158
+[picard] iter 7: res=1.4537e-02  nu*/g(t=0)=0.158
+[picard] iter 8: res=1.5532e-03  nu*/g(t=0)=0.158
+[picard] converged
+DONE damp_l0.8

@@ -1,0 +1,4 @@
+[picard] iter 0: res=4.0173e-02  nu*/g(t=0)=0.949
+[picard] iter 1: res=2.7912e-03  nu*/g(t=0)=0.946
+[picard] converged
+DONE damp_l16_s2

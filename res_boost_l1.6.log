@@ -1,0 +1,9 @@
+[picard] iter 0: res=3.2540e-01  nu*/g(t=0)=1.459
+[picard] iter 1: res=1.6179e-01  nu*/g(t=0)=1.287
+[picard] iter 2: res=7.0002e-02  nu*/g(t=0)=1.361
+[picard] iter 3: res=3.2858e-02  nu*/g(t=0)=1.327
+[picard] iter 4: res=1.4873e-02  nu*/g(t=0)=1.343
+[picard] iter 5: res=6.8309e-03  nu*/g(t=0)=1.336
+[picard] iter 6: res=3.1075e-03  nu*/g(t=0)=1.339
+[picard] converged
+DONE boost_l1.6

@@ -1,0 +1,16 @@
+H(p0) = 47.3792 +/- 0.0090
+boost seed 0: H_unc=44.134 H_star=44.768 dJ=+0.4188
+boost seed 1: H_unc=44.068 H_star=44.735 dJ=+0.4436
+boost seed 2: H_unc=44.140 H_star=44.792 dJ=+0.4369
+damp seed 0: H_unc=50.789 H_star=50.883 dJ=+0.0369
+damp seed 1: H_unc=50.717 H_star=50.807 dJ=+0.0382
+damp seed 2: H_unc=50.777 H_star=50.870 dJ=+0.0363
+reduced seed 0: H=44.723 J=44.4927
+reduced seed 1: H=44.673 J=44.4427
+reduced seed 2: H=44.741 J=44.5114
+lam-table boost_l0.4: H=44.765 sw2=0.0735 J=44.6492 bnd=0.00
+lam-table boost_l0.8: H=44.768 sw2=0.0731 J=44.5527 bnd=0.00
+lam-table boost_l1.6: H=44.584 sw2=0.0759 J=44.4031 bnd=0.00
+lam-table damp_l0.8: H=62.241 sw2=0.4613 J=58.6005 bnd=0.93
+lam-table damp_l16: H=50.883 sw2=0.1001 J=50.8256 bnd=0.00
+DONE metrics2

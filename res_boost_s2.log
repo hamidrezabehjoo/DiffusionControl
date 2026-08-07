@@ -1,0 +1,13 @@
+[picard] iter 0: res=5.8729e-01  nu*/g(t=0)=1.802
+[picard] iter 1: res=4.2136e-01  nu*/g(t=0)=1.344
+[picard] iter 2: res=2.6100e-01  nu*/g(t=0)=1.631
+[picard] iter 3: res=1.8563e-01  nu*/g(t=0)=1.434
+[picard] iter 4: res=1.2245e-01  nu*/g(t=0)=1.566
+[picard] iter 5: res=8.5814e-02  nu*/g(t=0)=1.475
+[picard] iter 6: res=5.8335e-02  nu*/g(t=0)=1.537
+[picard] iter 7: res=4.0477e-02  nu*/g(t=0)=1.493
+[picard] iter 8: res=2.7556e-02  nu*/g(t=0)=1.523
+[picard] iter 9: res=1.9072e-02  nu*/g(t=0)=1.503
+[picard] iter 10: res=1.3082e-02  nu*/g(t=0)=1.517
+[picard] iter 11: res=9.0387e-03  nu*/g(t=0)=1.507
+DONE boost_l0.8_s2

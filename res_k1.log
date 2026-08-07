@@ -1,0 +1,24 @@
+first-iterate K=1 delta=-0.1 seed=0: S(0)=+3.6028
+first-iterate K=1 delta=-0.1 seed=1: S(0)=+3.7712
+first-iterate K=1 delta=-0.1 seed=2: S(0)=+3.6019
+first-iterate K=1 delta=+0.0 seed=0: S(0)=-0.1883
+first-iterate K=1 delta=+0.0 seed=1: S(0)=-0.0401
+first-iterate K=1 delta=+0.0 seed=2: S(0)=-0.1741
+first-iterate K=1 delta=+0.1 seed=0: S(0)=-3.2447
+first-iterate K=1 delta=+0.1 seed=1: S(0)=-3.1182
+first-iterate K=1 delta=+0.1 seed=2: S(0)=-3.2199
+[picard] iter 0: res=5.8802e-01  nu*/g(t=0)=1.803
+[picard] iter 1: res=4.2345e-01  nu*/g(t=0)=1.362
+[picard] iter 2: res=2.6225e-01  nu*/g(t=0)=1.637
+[picard] iter 3: res=1.8714e-01  nu*/g(t=0)=1.447
+[picard] iter 4: res=1.2395e-01  nu*/g(t=0)=1.574
+[picard] iter 5: res=8.7089e-02  nu*/g(t=0)=1.486
+[picard] iter 6: res=5.9013e-02  nu*/g(t=0)=1.546
+[picard] iter 7: res=4.1073e-02  nu*/g(t=0)=1.504
+[picard] iter 8: res=2.8091e-02  nu*/g(t=0)=1.533
+[picard] iter 9: res=1.9453e-02  nu*/g(t=0)=1.513
+[picard] iter 10: res=1.3359e-02  nu*/g(t=0)=1.527
+[picard] iter 11: res=9.2283e-03  nu*/g(t=0)=1.518
+boost fixed point: particle ratio(0) = 1.518  exact = 1.528
+exact damp l=0.8: nu(0) = 0.05  l=16: ratio(0) = 0.951
+DONE k1

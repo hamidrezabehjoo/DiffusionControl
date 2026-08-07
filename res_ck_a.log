@@ -1,0 +1,10 @@
+K=2 scale=1.0: done, S(0)=+3.602
+K=2 scale=1.05: done, S(0)=+3.259
+K=2: C_hat=1.1595
+K=4 scale=1.0: done, S(0)=+3.612
+K=4 scale=1.05: done, S(0)=+3.269
+K=4: C_hat=1.1536
+K=8 scale=1.0: done, S(0)=+3.611
+K=8 scale=1.05: done, S(0)=+3.265
+K=8: C_hat=1.1665
+DONE ck
