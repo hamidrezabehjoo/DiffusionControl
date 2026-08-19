@@ -1,6 +1,0 @@
-H(p0) = 47.3769 +- 0.0090
-boost_l0.8/unc: H=44.134 gap=3.243 sw2=0.0817 J=44.134
-boost_l0.8/star: H=44.768 gap=2.609 sw2=0.0731 J=44.553
-damp_l16/unc: H=50.789 gap=-3.412 sw2=0.0984 J=50.789
-damp_l16/star: H=50.883 gap=-3.506 sw2=0.1001 J=50.826
-DONE metrics

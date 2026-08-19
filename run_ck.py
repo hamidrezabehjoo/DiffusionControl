@@ -15,7 +15,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gmm_control as gc
 import particle_solver as ps
 
-d = 64
+d = 32
 N, M, Nf, SEED = 20_000, 40, 800, 0
 Ks = [int(k) for k in sys.argv[1].split(",")] if len(sys.argv) > 1 else [2, 4, 8, 16, 32]
 tag = sys.argv[2] if len(sys.argv) > 2 else "d32"

@@ -73,3 +73,12 @@ models, applied to the K-mode Gaussian-mixture testbed of the paper
   identical across schedules, so schedule comparisons are noise-free.
 - Admissible set nu in [0.05, 8]; the projection is inactive in the boost
   scenario and active (lower bound) in the damping scenario at lambda = 0.8.
+
+## Dimension scaling (d = 64, 128)
+
+- `run_dimension.py D [STAGES] [SEED]` — the Section 4.4 protocol at
+  arbitrary dimension (dimension-scaled penalties lam = 0.8 * D/32 and
+  16 * D/32, per-iteration checkpointing); see `README_DIMENSIONS.md`.
+- `res_d64/`, `res_d128/` — results (kernels, Picard histories, metrics).
+- `res/dimension_summary.json` — cross-dimension summary table.
+- `../figs/fig_dimension.png` — four-panel dimension-collapse figure.
