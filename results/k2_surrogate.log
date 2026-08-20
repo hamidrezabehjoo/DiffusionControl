@@ -1,0 +1,5 @@
+[competing] delta = [ 0.02 -0.05]
+  exact range [-0.0355, +0.0078]  sign changes: 1
+[aligned] delta = [0.02 0.05]
+  exact range [+0.0000, +0.5503]  sign changes: 0
+saved to /mnt/agents/output/DiffusionControl/experiments/../results/k2_surrogate
