@@ -1,0 +1,11 @@
+built fig_schedule_boost.png
+built fig_convergence_boost.png
+built fig_schedule_damp.png
+built fig_convergence_damp.png
+built fig_k_independence.png
+built fig_k1_validation.png
+built fig_kernel_particle.png
+SKIP fig_dimension.png - only 1 dims available
+
+built 7 figures -> /mnt/agents/output/paper/figs
+skipped: fig_dimension.png

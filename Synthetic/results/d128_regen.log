@@ -1,0 +1,9 @@
+=== synthetic suite: D = 128, seed 0, stages ['boost', 'damp', 'metrics'] ===
+    lam_boost = 3.2, lam_damp = 64.0 (scaled by D/32 from the d = 32 values 0.8 / 16)
+[19:37:22] boost: resuming from iteration 12
+[19:37:22] boost: terminal cloud at the fixed point
+    (3.7 min)
+[19:41:03] boost: uncontrolled cloud (same CRN seed)
+    (3.9 min)
+[19:44:55] damp: resuming from iteration 2
+[19:44:55] damp: iteration 2 (lam=64.00, delta=+0.1)

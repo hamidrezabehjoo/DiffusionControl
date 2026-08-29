@@ -1,0 +1,20 @@
+=== synthetic suite: D = 128, seed 0, stages ['k1kernel', 'k1fixed', 'k8kernel', 'boost', 'damp', 'reduced', 'metrics'] ===
+    lam_boost = 3.2, lam_damp = 64.0 (scaled by D/32 from the d = 32 values 0.8 / 16)
+k1kernel: already done, skipping
+k1fixed: already done, skipping
+k8kernel: already done, skipping
+[16:39:50] boost: resuming from iteration 12
+[16:39:50] boost: terminal cloud at checkpointed fixed point
+    (3.0 min)
+[16:42:50] boost: uncontrolled cloud (same CRN seed)
+    (1.9 min)
+[16:44:42] damp: iteration 0 (lam=64.00, delta=+0.1)
+[16:47:26]     res=3.9347e-02  nu*/g(t=0)=0.950
+    (2.7 min)
+[16:47:26] damp: iteration 1 (lam=64.00, delta=+0.1)
+[16:50:07]     res=2.8090e-03  nu*/g(t=0)=0.947
+    (2.7 min)
+[16:50:07] damp: converged
+[16:50:07] damp: uncontrolled cloud (same CRN seed)
+    (1.8 min)
+[16:51:53] reduced: grid search over (alpha, t_w)

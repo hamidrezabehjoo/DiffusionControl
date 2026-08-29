@@ -1,0 +1,12 @@
+=== synthetic suite: D = 128, seed 2, stages ['k1kernel'] ===
+    lam_boost = 3.2, lam_damp = 64.0 (scaled by D/32 from the d = 32 values 0.8 / 16)
+[19:26:21] k1kernel: forward+kernel, delta=-0.1
+[19:28:14]     S(0) particle +14.957 vs exact +14.222 (S/d: +0.11685 vs +0.11111)
+    (1.9 min)
+[19:28:14] k1kernel: forward+kernel, delta=+0.0
+[19:30:11]     S(0) particle -0.280 vs exact +0.000 (S/d: -0.00219 vs +0.00000)
+    (2.0 min)
+[19:30:11] k1kernel: forward+kernel, delta=+0.1
+[19:32:03]     S(0) particle -12.572 vs exact -11.631 (S/d: -0.09822 vs -0.09087)
+    (1.9 min)
+=== D = 128, seed 2 done; results in /mnt/agents/output/DiffusionControl/experiments/../results/d128/seed2/ ===

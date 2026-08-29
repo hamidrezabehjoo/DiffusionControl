@@ -1,0 +1,8 @@
+=== synthetic suite: D = 128, seed 0, stages ['metrics'] ===
+    lam_boost = 3.2, lam_damp = 64.0 (scaled by D/32 from the d = 32 values 0.8 / 16)
+[19:20:30] metrics: evaluating
+[19:20:34] metrics boost: gap 13.112 -> 10.503, sw2 0.0802 -> 0.0705, dJ=+1.7336
+[19:20:37] metrics damp: gap -13.439 -> -13.807, sw2 0.0883 -> 0.0900, dJ=+0.1498
+[19:20:39] metrics reduced (alpha=1.35, tw=0.3): gap 10.665, J 172.0169
+    (0.2 min)
+=== D = 128, seed 0 done; results in /mnt/agents/output/DiffusionControl/experiments/../results/d128/seed0/ ===

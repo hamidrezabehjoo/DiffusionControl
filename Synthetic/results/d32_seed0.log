@@ -1,0 +1,42 @@
+=== synthetic suite: D = 32, seed 0, stages ['k8kernel', 'boost', 'damp', 'reduced', 'metrics'] ===
+    lam_boost = 0.8, lam_damp = 16.0 (scaled by D/32 from the d = 32 values 0.8 / 16)
+k8kernel: already done, skipping
+[19:32:04] boost: iteration 0 (lam=0.80, delta=-0.1)
+[19:32:48]     res=5.8894e-01  nu*/g(t=0)=1.805
+    (0.7 min)
+[19:32:48] boost: iteration 1 (lam=0.80, delta=-0.1)
+[19:33:33]     res=4.2327e-01  nu*/g(t=0)=1.363
+    (0.8 min)
+[19:33:33] boost: iteration 2 (lam=0.80, delta=-0.1)
+[19:34:17]     res=2.6119e-01  nu*/g(t=0)=1.638
+    (0.7 min)
+[19:34:18] boost: iteration 3 (lam=0.80, delta=-0.1)
+[19:35:03]     res=1.8609e-01  nu*/g(t=0)=1.448
+    (0.8 min)
+[19:35:03] boost: iteration 4 (lam=0.80, delta=-0.1)
+[19:35:43]     res=1.2294e-01  nu*/g(t=0)=1.575
+    (0.7 min)
+[19:35:43] boost: iteration 5 (lam=0.80, delta=-0.1)
+[19:36:22]     res=8.6169e-02  nu*/g(t=0)=1.487
+    (0.7 min)
+[19:36:23] boost: iteration 6 (lam=0.80, delta=-0.1)
+[19:37:01]     res=5.8419e-02  nu*/g(t=0)=1.547
+    (0.6 min)
+[19:37:01] boost: iteration 7 (lam=0.80, delta=-0.1)
+[19:38:14]     res=4.0657e-02  nu*/g(t=0)=1.506
+    (1.2 min)
+[19:38:15] boost: iteration 8 (lam=0.80, delta=-0.1)
+[19:40:02]     res=2.7762e-02  nu*/g(t=0)=1.534
+    (1.8 min)
+[19:40:02] boost: iteration 9 (lam=0.80, delta=-0.1)
+[19:41:51]     res=1.9186e-02  nu*/g(t=0)=1.514
+    (1.8 min)
+[19:41:52] boost: iteration 10 (lam=0.80, delta=-0.1)
+[19:43:32]     res=1.3171e-02  nu*/g(t=0)=1.528
+    (1.7 min)
+[19:43:32] boost: iteration 11 (lam=0.80, delta=-0.1)
+[19:45:13]     res=9.0315e-03  nu*/g(t=0)=1.518
+    (1.7 min)
+[19:45:13] boost: uncontrolled cloud (same CRN seed)
+    (1.0 min)
+[19:46:13] damp: iteration 0 (lam=16.00, delta=+0.1)

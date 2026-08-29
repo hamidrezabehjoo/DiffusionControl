@@ -1,96 +1,48 @@
-# DiffusionControl
+# Optimal Inference-Time Noise Control for Diffusion Models
 
-Code for *Inference-time noise control of diffusion models* (Behjoo et al.).
+Code for the paper *Optimal Inference-Time Noise Control for Diffusion Models*
+(Behjoo & Zhang).
 
 The paper formulates the inference-time diffusion coefficient `nu(t)` of a
 pretrained diffusion model as an optimal control variable for terminal
-entropy, derives its Pontryagin characterization, and shows the optimal
-controller reduces to a **two-line change of any DDPM sampler**:
+entropy, derives its Wasserstein Pontryagin characterization, and shows the
+optimal controller reduces to a **two-line change of any DDPM sampler**:
 
-1. score coefficient `beta_t` → `(beta_t + nu_t^2) / 2`
-2. injected noise std `sqrt(beta_t)` → `nu_t`
+1. score coefficient `beta_t` &rarr; `(beta_t + nu_t^2) / 2`
+2. injected noise std `sqrt(beta_t)` &rarr; `nu_t`
 
 with the reduced two-parameter family `nu(t) = alpha * g(t)` on the
-low-noise window `[0, t_w]`.
+low-noise window `[0, t_w]`. The theory predicts where control acts (late
+reverse time), in which direction (sign of the score's variance mismatch),
+and that it is inert when the score is exact.
 
-## Layout
+## Repository layout
 
-```
-diffusion_control/        the package
-  gmm_control.py          K-GMM synthetic testbed (model, VP schedule,
-                          exact mixture scores/densities)
-  particle_solver.py      forward particle solver, costate regression,
-                          kernel estimator (two-fold cross-fitting),
-                          Picard fixed-point iteration
-  exact_k1.py             exact one-component ground truth (Riccati costate,
-                          exact kernel and fixed point)
-  metrics.py              terminal entropy, objective, sliced W2, occupancy
-experiments/
-  run_synthetic.py        unified checkpointed driver; all headline numbers
-                          (default: d = 128, seed 0)
-  run_k_independence.py   kernel Lipschitz constant vs number of modes K
-  run_k2_surrogate.py     two-mode surrogate-kernel sign study (SI)
-  make_figures.py         builds every paper figure into ../paper/figs/
-results/                  all run outputs (checkpointed, resumable)
-```
+| Folder | Contents | Paper section |
+|---|---|---|
+| `Synthetic/` | K-GMM testbed, exact K=1 ground truth (Riccati), particle fixed-point solver, K-independence and dimension-scaling suites, all paper figures | Synthetic verification of the exact theory |
+| `ALDP/` | Alanine dipeptide null-control experiment (Prediction 1: near-exact score &rArr; controller inactive) | Protein Applications, Prediction 1 |
+| `FastFolding/` | Arts et al. fast-folding benchmark with the DFF sampler: Chignolin temporal ablation and per-system gains (Predictions 2, 3) | Protein Applications, Predictions 2–3 |
+| `ADK/` | Boltz-2 port of the controller; adenylate kinase open/closed basin redistribution, dose–response, and bit-identical no-churn null control (Prediction 4) | Protein Applications, Prediction 4 |
+| `STARLING/` | Latent-diffusion IDP ensembles: SAXS benchmark replication, dose response, bidirectional per-protein control, sign-law diagnosis (Prediction 5) | Protein Applications, Prediction 5 |
 
-## Install
+Each folder has its own README with exact run instructions.
 
-```bash
-pip install numpy scipy matplotlib   # that's it
-```
+## Controller interface
 
-## Reproduce the paper's synthetic results
+All protein experiments use the same two knobs, exposed as environment
+variables in the patched samplers:
 
-Headline suite (K=8 mixture, d=128, seed 0; boost + damp + reduced
-controller + metrics). Stages checkpoint after every Picard iteration and
-resume automatically if interrupted:
+| Variable | Meaning | Paper symbol |
+|---|---|---|
+| `NU_ALPHA` | noise gain on the control window (1.0 = stock) | `alpha` |
+| `NU_TW` | late-reverse window `[0, t_w]` in normalized time | `t_w` |
 
-```bash
-python3 experiments/run_synthetic.py --dim 128 --seed 0
-```
+Out-of-window steps are bit-identical to the stock sampler, and paired
+stock/controlled runs consume identical Gaussian draws (common random
+numbers).
 
-Individual stages:
+## Citation
 
-```bash
-python3 experiments/run_synthetic.py --dim 128 --stages k8kernel
-python3 experiments/run_synthetic.py --dim 128 --stages boost
-python3 experiments/run_synthetic.py --dim 128 --stages damp
-python3 experiments/run_synthetic.py --dim 128 --stages damp_boundary
-python3 experiments/run_synthetic.py --dim 128 --stages reduced,metrics
-```
-
-Supporting studies:
-
-```bash
-# dimension robustness (SI app:dimensions), ~same cost per dim
-python3 experiments/run_synthetic.py --dim 32 --stages k8kernel,boost,damp,reduced,metrics
-python3 experiments/run_synthetic.py --dim 64 --stages k8kernel,boost,damp,reduced,metrics
-
-# K-independence of the kernel Lipschitz constant (Thm kgmm, d=32)
-python3 experiments/run_k_independence.py
-
-# two-mode surrogate-kernel sign study (SI app:exact, fig:particle-kernel)
-python3 experiments/run_k2_surrogate.py
-
-# one-component exact validation, seeds for error bars (SI app:k1validation)
-python3 experiments/run_synthetic.py --dim 128 --seed 1 --stages k1kernel
-python3 experiments/run_synthetic.py --dim 128 --seed 2 --stages k1kernel
-```
-
-Figures (after the runs above):
-
-```bash
-python3 experiments/make_figures.py
-```
-
-## Notes
-
-- All heavy linear algebra is matmul-based (no `(N, K, d)` broadcast
-  temporaries), so d=128 with N=2×10^4 particles runs on a CPU workstation.
-- Common random numbers are used across compared runs (same CRN seed), and
-  the kernel estimator uses two-fold cross-fitting with a
-  mixture-of-quadratures costate regression — see
-  `particle_solver.kernel_from_particles`.
-- The reduced controller applied to a real protein latent-diffusion model
-  (STARLING) lives in the companion folder `starling_control/`.
+If you use this code, please cite the paper (citation block to be added on
+publication).
